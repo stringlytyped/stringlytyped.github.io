@@ -45,7 +45,7 @@
     <h1>Publications</h1>
     <ul>
       {% for item in site.pages %}
-        {% if item.title && item.permalink && item.permalink != page.url && item.permalink contains 'publication' %}
+        {% if item.title and item.permalink and item.permalink != page.url and item.permalink contains 'publication' %}
           <li><a href="{{ site.url }}{{ site.baseurl }}{{ item.permalink }}">{{ item.title }}</a></li>
         {% endif %}
       {% endfor %}
